@@ -49,12 +49,13 @@ table {
 
 
 .wrap{
-    width: 100%;
+    width: 1920px;
     margin: 0 auto;
     
 }
 .header{
-    border: 1px solid black;
+    
+    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,3 +87,43 @@ table {
     letter-spacing: 0;
     color: #000000;
 }
+
+.herosection {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1920px;
+  }
+  .herosectionright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+  }
+  .hero-text {
+    position: absolute;
+    color:#0027D5;
+    padding-top: 300px;
+    padding-right: 80px;
+    padding-bottom: 300px;
+    padding-left: 80px;
+  }
+  .hero-text h1{
+    font-size: 120px;
+    font-family: Noto Sans TC;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 0;
+
+  }
+  .hero-text p{
+    font-size: 28px;
+    font-family: Noto Sans TC;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0;
+
+  }
+
+  
+  
