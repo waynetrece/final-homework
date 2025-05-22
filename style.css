@@ -46,3 +46,43 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+.wrap{
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.header{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 24px;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-bottom: 24px;
+    
+}
+.menu{
+    display: flex;
+    
+}
+.menu li{
+    /* border: 1px solid black; */
+    display: block;
+    width: 84px;
+    height: 42px;
+    gap: 8px;
+    text-align: center;
+}
+.menu li a{
+    text-decoration: none;
+    font-family: Noto Sans TC;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #000000;
+}
