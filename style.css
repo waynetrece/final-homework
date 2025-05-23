@@ -49,7 +49,8 @@ table {
 
 
 .wrap{
-    width: 1920px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     
 }
@@ -60,10 +61,8 @@ table {
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    padding-top: 24px;
-    padding-right: 80px;
-    padding-left: 80px;
-    padding-bottom: 24px;
+    /* 考量到RWD用百分比會比固定尺寸適合 圖檔雖然左右是80PX ／１９２０＝4.17左右 用5%會比較適中 */
+    padding: 24px 5%;
     
 }
 .menu{
@@ -73,7 +72,8 @@ table {
 .menu li{
     /* border: 1px solid black; */
     display: block;
-    width: 84px;
+    /* 固定寬度在小螢幕會有問題 width:84px;就會沒有彈性 */
+    min-width: 84px;
     height: 42px;
     gap: 8px;
     text-align: center;
@@ -90,8 +90,10 @@ table {
 
 .herosection {
     display: flex;
-    margin: 0 auto;
-    max-width: 1920px;
+    width: 100%;
+    
+    
+    
   }
   .herosectionright{
     display: flex;
@@ -100,16 +102,59 @@ table {
     position: relative;
     
   }
-  .hero-text {
-    position: absolute;
-    color:#0027D5;
-    padding-top: 300px;
-    padding-right: 80px;
-    padding-bottom: 300px;
-    padding-left: 80px;
+  /* flex: 1 1 50% 的含義：
+• 1：可以放大（如果有剩餘空間）
+• 1：可以縮小（如果空間不足）
+• 50%：基準大小是50%
+
+min-width: 0 的重要性：
+• 防止內容（如長文字、大圖片）撐破 flex 容器
+• 讓 flex 元素真正能夠縮小
+• 避免橫向滾動問題 */
+ 
+  .herosectionleft,
+  .herosectionright{
+    flex: 1 1 50%;
+    min-width: 0;
   }
+
+  .herosectionleft img,
+  .herosectionright img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+}
+.hero-text {
+    position: absolute;
+    
+    /* 用百分比定位，不用 padding */
+    top: 40%;        /* 距離上方40% */
+    left: 25%;       /* 距離左方25% */
+    width: 50%;      /* 寬度50% */
+    color: #0027D5;
+    text-align: center;
+}
+
+/* 不同螢幕調整位置 */
+@media screen and (max-width: 768px) {
+    .hero-text {
+        top: 30%;
+        left: 15%;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-text {
+        top: 25%;
+        left: 10%;
+        width: 80%;
+    }
+}
   .hero-text h1{
-    font-size: 120px;
+    /* 電腦版 */
+    font-size: 120px; 
     font-family: Noto Sans TC;
     font-weight: 900;
     line-height: 1.5;
@@ -124,6 +169,18 @@ table {
     letter-spacing: 0;
 
   }
+  
+ /* 新增：平板響應式 */
+@media screen and (max-width: 768px) {
+    .hero-text h1 { font-size: 80px; }
+    .hero-text p { font-size: 24px; }
+}
+
+/* 新增：手機響應式 */
+@media screen and (max-width: 480px) {
+    .hero-text h1 { font-size: 48px; }
+    .hero-text p { font-size: 20px; }
+}
 
   
   
