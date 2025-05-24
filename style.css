@@ -49,12 +49,12 @@ table {
 
 
 .wrap{
-    width: 100%;
-    max-width: 100%;
+    width: 95%;
+    max-width: 1920px;
     margin: 0 auto;
     
 }
-.header{
+.navbar{
     
     /* border: 1px solid black; */
     display: flex;
@@ -63,10 +63,11 @@ table {
     background-color: #ffffff;
     /* 考量到RWD用百分比會比固定尺寸適合 圖檔雖然左右是80PX ／１９２０＝4.17左右 用5%會比較適中 */
     padding: 24px 5%;
-    
+    flex-wrap: wrap;
 }
 .menu{
     display: flex;
+    flex-wrap: wrap;
     
 }
 .menu li{
@@ -92,10 +93,12 @@ table {
     display: flex;
     width: 100%;
     
-    
-    
   }
-  .herosectionright{
+
+
+
+
+.herosectionright{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,6 +128,10 @@ min-width: 0 的重要性：
     max-width: 100%;
     display: block;
 }
+
+
+
+
 .hero-text {
     position: absolute;
     
