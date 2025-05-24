@@ -143,7 +143,7 @@ min-width: 0 的重要性：
   .hero-text h1{
     /* 電腦版 */
     font-size: 120px; 
-    font-family: Noto Sans TC;
+    font-family: Noto Sans TC,sans-serif;
     font-weight: 900;
     line-height: 1.5;
     letter-spacing: 0;
@@ -151,7 +151,7 @@ min-width: 0 的重要性：
   }
   .hero-text p{
     font-size: 28px;
-    font-family: Noto Sans TC;
+    font-family: Noto Sans TC,sans-serif;
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: 0;
@@ -183,6 +183,7 @@ min-width: 0 的重要性：
     .hero-text p {
         font-size: 20px;
     }
+    
 }
 
 /* 手機版樣式（≤ 480px）*/
@@ -210,6 +211,102 @@ min-width: 0 的重要性：
         font-size: 14px;
     }
 }
+
+/* ABOUTSECTON區塊 */
+    .aboutsection{
+        
+        display: flex;
+        max-width: 1920px;
+        flex-wrap: wrap;
+
+}
+    .about-left,
+    .about-right{
+        flex: 1 1 50%;
+        min-width: 0;
+}
+    .about-left img{
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        display: block;
+}
+    .about-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+}
+
+    .about-content{
+    position: absolute;
+    left: 4%; 
+    width: 80%;    
+}
+    .date{
+
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Noto Sans TC, sans-serif;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .sub-title{
+        font-size: 24px;
+        font-weight: 500;
+        font-family: Noto Sans TC, sans-serif;
+        line-height: 1.5;
+        color: #0027D5 ;
+        display: block;
+        margin-bottom: 8px;
+    }
+    .new{
+        font-size: 16px;
+        font-weight: 700;
+        font-family: Noto Sans TC, sans-serif;
+        line-height: 1.5;
+        background: #0027D5;
+        color: white ;
+        padding: 5px 12px;
+        border-radius: 40px;
+        text-align: center;
+    }
+    .title{
+        font-size: 28px;
+        font-weight: 700;
+        font-family: Noto Sans TC, sans-serif;
+        line-height: 1.5;
+        display: block;
+        margin-bottom: 8px;
+    }
+    .description{
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Noto Sans TC, sans-serif;
+        line-height: 1.5;
+        display: block;
+        margin-bottom: 16px;
+    }
+    .read-more{
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Noto Sans TC, sans-serif;
+        line-height: 1.5;
+        padding: 4px 8px;
+        background: white;
+        border-radius: 40px;
+        color: #4B4B4B;
+        text-decoration: none;
+        border: solid 1px #4B4B4B;
+        
+        
+    }
+    
+    
+    
 
   
   
