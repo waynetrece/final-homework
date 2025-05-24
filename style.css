@@ -159,60 +159,7 @@ min-width: 0 的重要性：
   }
 
 
-  /* 響應式RWD新增區塊 */
- /* 平板版樣式（≤ 768px）*/
-@media screen and (max-width: 768px) {
-    .herosection{
-        flex-direction: column;  
-    }
-    .herosectionleft,
-    .herosectionright {
-        width: 100%;
-        flex: none;
-    }
-    .hero-text {
-        top: 20%;
-        left: 10%;
-        width: 60%;
-    }
-    
-    .hero-text h1 {
-        font-size: 64px;
-    }
-    
-    .hero-text p {
-        font-size: 20px;
-    }
-    
-}
-
-/* 手機版樣式（≤ 480px）*/
-@media screen and (max-width: 480px) {
-    .herosection {
-        flex-direction: column;
-    }
-    
-    .herosectionleft,
-    .herosectionright {
-        width: 100%;
-        flex: none;
-    }
-    .hero-text {
-        top: 15%;
-        left: 5%;
-        width: 70%;
-    }
-    
-    .hero-text h1 {
-        font-size: 36px;
-    }
-    
-    .hero-text p {
-        font-size: 14px;
-    }
-}
-
-/* ABOUTSECTON區塊 */
+    /* ABOUTSECTON區塊 */
     .aboutsection{
         
         display: flex;
@@ -237,12 +184,16 @@ min-width: 0 的重要性：
     justify-content: center;
     position: relative;
     
+    
+    
 }
-
+    /* ABOUT-CONTEN區塊 */
     .about-content{
     position: absolute;
-    left: 4%; 
-    width: 80%;    
+    top: 25%;           
+    left: 20px;
+    right: 10px;
+      
 }
     .date{
 
@@ -272,7 +223,8 @@ min-width: 0 的重要性：
         color: white ;
         padding: 5px 12px;
         border-radius: 40px;
-        text-align: center;
+        display: inline-block;
+        margin-left: 8px;
     }
     .title{
         font-size: 28px;
@@ -301,10 +253,110 @@ min-width: 0 的重要性：
         color: #4B4B4B;
         text-decoration: none;
         border: solid 1px #4B4B4B;
+        display: inline-block;
         
         
     }
+      /* 響應式RWD新增區塊 */
+ /* 平板版樣式（≤ 768px）*/
+@media screen and (max-width: 768px) {
+    .herosection{
+        flex-direction: column;  
+    }
+    .herosectionleft,
+    .herosectionright {
+        width: 100%;
+        flex: none;
+    }
+    .hero-text {
+        top: 20%;
+        left: 10%;
+        width: 60%;
+    }
     
+    .hero-text h1 {
+        font-size: 64px;
+    }
+    
+    .hero-text p {
+        font-size: 20px;
+    }
+    .aboutsection{
+        flex-direction: column;
+    }
+    .about-left,
+    .about-right{
+        width: 100%;
+        flex: none;
+    }
+    .about-content{
+        position: static;     
+        padding: 24px 16px;  
+    }
+    
+    .sub-title{
+        font-size: 20px;
+    }
+    
+    .title{
+        font-size: 24px;
+    }
+}
+    
+}
+
+/* 手機版樣式（≤ 480px）*/
+@media screen and (max-width: 480px) {
+    .herosection {
+        flex-direction: column;
+    }
+    
+    .herosectionleft,
+    .herosectionright {
+        width: 100%;
+        flex: none;
+    }
+    .hero-text {
+        top: 15%;
+        left: 5%;
+        width: 70%;
+    }
+    
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .hero-text p {
+        font-size: 14px;
+    }
+    .aboutsection{
+        flex-direction: column;
+    }
+    .about-left,
+    .about-right{
+        width: 100%;
+        flex: none;
+    }
+    .about-content{
+        position: static;      /* 改為靜態定位 */
+        padding: 20px 12px;   /* 用 padding 控制間距 */
+    }
+    
+    .sub-title{
+        font-size: 18px;
+    }
+    
+    .title{
+        font-size: 20px;
+    }
+    
+    .description{
+        font-size: 14px;
+    }
+}
+    
+
+
     
     
 
