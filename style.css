@@ -93,7 +93,8 @@ table {
 /* HERO SECTION區塊 */
 .herosection {
     display: flex;
-    width: 100%;
+    max-width: 1920px;
+    flex-wrap: wrap;
   }
 
   /* flex: 1 1 50% 的含義：
@@ -161,35 +162,52 @@ min-width: 0 的重要性：
   /* 響應式RWD新增區塊 */
  /* 平板版樣式（≤ 768px）*/
 @media screen and (max-width: 768px) {
+    .herosection{
+        flex-direction: column;  
+    }
+    .herosectionleft,
+    .herosectionright {
+        width: 100%;
+        flex: none;
+    }
     .hero-text {
-        top: 15%;
-        left: 8%;
-        width: 70%;
+        top: 20%;
+        left: 10%;
+        width: 60%;
     }
     
     .hero-text h1 {
-        font-size: 40px;
+        font-size: 64px;
     }
     
     .hero-text p {
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 
 /* 手機版樣式（≤ 480px）*/
 @media screen and (max-width: 480px) {
+    .herosection {
+        flex-direction: column;
+    }
+    
+    .herosectionleft,
+    .herosectionright {
+        width: 100%;
+        flex: none;
+    }
     .hero-text {
-        top: 8%;
-        left: 4%;
-        width: 80%;
+        top: 15%;
+        left: 5%;
+        width: 70%;
     }
     
     .hero-text h1 {
-        font-size: 24px;
+        font-size: 36px;
     }
     
     .hero-text p {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
