@@ -258,8 +258,8 @@ min-width: 0 的重要性：
         
     }
       /* 響應式RWD新增區塊 */
- /* 平板版樣式（≤ 768px）*/
-@media screen and (max-width: 768px) {
+ /* 平板版樣式（≤ 1024px）*/
+@media screen and (max-width: 1024px) {
     .herosection{
         flex-direction: column;  
     }
@@ -281,19 +281,26 @@ min-width: 0 的重要性：
     .hero-text p {
         font-size: 20px;
     }
+    /* aboutsection */
+
     .aboutsection{
         flex-direction: column;
+        align-items: stretch;
     }
     .about-left,
     .about-right{
         width: 100%;
         flex: none;
+        min-height: 400px;
+    }
+    .about-left img{
+        height: 100%;
+        object-fit: cover; /* 讓圖片填滿且不變形 */
     }
     .about-content{
-        position: static;     
-        padding: 24px 16px;  
+        position: static; 
+        padding: 40px 24px;
     }
-    
     .sub-title{
         font-size: 20px;
     }
@@ -301,7 +308,6 @@ min-width: 0 的重要性：
     .title{
         font-size: 24px;
     }
-}
     
 }
 
@@ -329,6 +335,7 @@ min-width: 0 的重要性：
     .hero-text p {
         font-size: 14px;
     }
+    /* About Section */
     .aboutsection{
         flex-direction: column;
     }
@@ -336,11 +343,19 @@ min-width: 0 的重要性：
     .about-right{
         width: 100%;
         flex: none;
+        min-height: 250px;
     }
+    .about-left img{
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    
     .about-content{
-        position: static;      /* 改為靜態定位 */
-        padding: 20px 12px;   /* 用 padding 控制間距 */
+        position: static; 
+        padding: 20px 12px; 
     }
+    
     
     .sub-title{
         font-size: 18px;
@@ -353,9 +368,13 @@ min-width: 0 的重要性：
     .description{
         font-size: 14px;
     }
-}
     
-
+    .read-more{
+        padding: 6px 12px; 
+        font-size: 14px;
+    }
+    
+}
 
     
     
