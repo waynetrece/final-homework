@@ -65,6 +65,8 @@ table {
     padding: 24px 5%;
     flex-wrap: wrap;
 }
+
+/* MENU區塊 */
 .menu{
     display: flex;
     flex-wrap: wrap;
@@ -76,12 +78,11 @@ table {
     /* 固定寬度在小螢幕會有問題 width:84px;就會沒有彈性 */
     min-width: 84px;
     height: 42px;
-    gap: 8px;
     text-align: center;
 }
 .menu li a{
     text-decoration: none;
-    font-family: Noto Sans TC;
+    font-family: Noto Sans TC,sans-serif;
     font-size: 28px;
     font-weight: 700;
     line-height: 1.5;
@@ -89,22 +90,12 @@ table {
     color: #000000;
 }
 
+/* HERO SECTION區塊 */
 .herosection {
     display: flex;
     width: 100%;
-    
   }
 
-
-
-
-.herosectionright{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    
-  }
   /* flex: 1 1 50% 的含義：
 • 1：可以放大（如果有剩餘空間）
 • 1：可以縮小（如果空間不足）
@@ -121,6 +112,14 @@ min-width: 0 的重要性：
     min-width: 0;
   }
 
+  .herosectionright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+  }
+
   .herosectionleft img,
   .herosectionright img {
     width: 100%;
@@ -129,36 +128,17 @@ min-width: 0 的重要性：
     display: block;
 }
 
-
-
-
+/* HERO SECTION TEXT文字區塊 */
 .hero-text {
     position: absolute;
-    
     /* 用百分比定位，不用 padding */
-    top: 40%;        /* 距離上方40% */
-    left: 25%;       /* 距離左方25% */
+    top: 24%;        /* 距離上方40% */
+    left: 8%;       /* 距離左方25% */
     width: 50%;      /* 寬度50% */
     color: #0027D5;
     text-align: center;
 }
 
-/* 不同螢幕調整位置 */
-@media screen and (max-width: 768px) {
-    .hero-text {
-        top: 30%;
-        left: 15%;
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .hero-text {
-        top: 25%;
-        left: 10%;
-        width: 80%;
-    }
-}
   .hero-text h1{
     /* 電腦版 */
     font-size: 120px; 
@@ -176,17 +156,41 @@ min-width: 0 的重要性：
     letter-spacing: 0;
 
   }
-  
- /* 新增：平板響應式 */
+
+
+  /* 響應式RWD新增區塊 */
+ /* 平板版樣式（≤ 768px）*/
 @media screen and (max-width: 768px) {
-    .hero-text h1 { font-size: 80px; }
-    .hero-text p { font-size: 24px; }
+    .hero-text {
+        top: 15%;
+        left: 8%;
+        width: 70%;
+    }
+    
+    .hero-text h1 {
+        font-size: 40px;
+    }
+    
+    .hero-text p {
+        font-size: 16px;
+    }
 }
 
-/* 新增：手機響應式 */
+/* 手機版樣式（≤ 480px）*/
 @media screen and (max-width: 480px) {
-    .hero-text h1 { font-size: 48px; }
-    .hero-text p { font-size: 20px; }
+    .hero-text {
+        top: 8%;
+        left: 4%;
+        width: 80%;
+    }
+    
+    .hero-text h1 {
+        font-size: 24px;
+    }
+    
+    .hero-text p {
+        font-size: 12px;
+    }
 }
 
   
