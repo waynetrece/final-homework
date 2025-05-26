@@ -49,7 +49,7 @@ table {
 
 
 .wrap{
-    /* width: 100%; 如果想要左右兩邊不要貼齊版面 */
+    /* width: 95%; 如果想要左右兩邊不要貼齊版面 */
     max-width: 1920px;
     margin: 0 auto;
     
@@ -187,12 +187,14 @@ min-width: 0 的重要性：
     
     
 }
-    /* ABOUT-CONTEN區塊 */
+   
     .about-content{
     position: absolute;
     top: 25%;           
-    left: 20px;
-    right: 10px;
+    left: 5%;
+    right: 15%;
+    width: auto;
+   
       
 }
     .date{
@@ -259,9 +261,9 @@ min-width: 0 的重要性：
     }
     /* SEARCH區塊 */
     .search{
-        margin-top: 5%;
-        margin-bottom: 2%;
-        margin-left: 20%;
+        max-width: 1200px;  
+        margin: 5% auto 2% auto; 
+        padding: 0 20px;
 
     }
     .search-container{
@@ -305,6 +307,90 @@ min-width: 0 的重要性：
         
         
     }
+
+    /* Blog區塊 */
+
+    .blog{
+       width: 100%;
+       padding: 10px 0;
+        
+    }
+
+    
+    .blog-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;  
+        gap: 30px;               /* 卡片之間的間距 */
+        max-width: 1200px;       
+        margin: 0 auto;          
+        padding: 0 20px;        
+    }
+    
+    .blog-box {
+        flex: 1 1 300px;         /* 基礎寬度300px，可伸縮 */
+        max-width: 350px;        
+        background: white;       
+        border-radius: 8px;     
+        padding: 20px;          
+    }
+    
+    .blog-box img {
+        width: 100%;
+        height: 200px;           /* 固定高度 */    
+        border-radius: 4px;
+        margin-bottom: 16px;
+    }
+    
+    .blog-box .date {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 8px;
+        display: block;
+    }
+    
+    .blog-box .tag {
+        font-size: 14px;
+        color: #0027D5;
+        margin-bottom: 12px;
+        display: block;
+    }
+    
+    .blog-box .title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        display: block;
+        line-height: 1.4;
+    }
+    
+    .blog-box .content {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 16px;
+        display: block;
+    }
+    
+    .blog-box .btn {
+        display: inline-block;
+        padding: 8px 16px;
+        background: white;
+        border: 1px solid #4B4B4B;
+        border-radius: 20px;
+        color: #4B4B4B;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    
+    .blog-box .btn:hover {
+        background: #4B4B4B;
+        color: white;
+    }
+    
+
+
+
 
       /* 響應式RWD新增區塊 */
     /* 平板版樣式（≤ 1024px）*/
@@ -364,6 +450,15 @@ min-width: 0 的重要性：
     .search-container{
         width: 100%  
     }
+ /* blog */
+    .blog-container {
+        gap: 20px;
+    }
+    .blog-box {
+        flex: 1 1 280px;
+    }
+}
+
 }
 
 /* 手機版樣式（≤ 480px）*/
@@ -437,6 +532,14 @@ min-width: 0 的重要性：
         width: 100%;
         max-width: 400px;
         margin: 0 auto;
+    }
+/* blog */
+    .blog-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .blog-box {
+        max-width: 100%;
     }
     
 }
