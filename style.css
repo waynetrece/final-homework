@@ -49,7 +49,7 @@ table {
 
 
 .wrap{
-    width: 95%;
+    /* width: 100%; 如果想要左右兩邊不要貼齊版面 */
     max-width: 1920px;
     margin: 0 auto;
     
@@ -279,7 +279,8 @@ min-width: 0 的重要性：
         border: 1px solid #4B4B4B;
         border-color: #4B4B4B;
         border-radius: 40px;
-        padding: 16px 48px 16px 16px;
+        /* 鼠標不要靠太左邊條整padding得右邊即可 */
+        padding: 16px 48px 16px 42px;
         font-size: 16px;
         font-weight: 500;
         outline: none;
@@ -295,12 +296,14 @@ min-width: 0 的重要性：
      .searchbar:focus {                  
         border-color: #0027D5;         
         outline: none;
+        
      }
 
     .searchbar::placeholder {
         color: #999999;
         font-family: Noto Sans TC, sans-serif;
-        padding-left: 10%;
+        
+        
     }
 
       /* 響應式RWD新增區塊 */
