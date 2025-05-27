@@ -387,7 +387,34 @@ min-width: 0 的重要性：
         background: #4B4B4B;
         color: white;
     }
+
+    /* pagination */
+
+    .pagination{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin: 40px auto 20px auto;
+        gap: 8p;
+        padding: 0 20px;
+
+    }
+    .pagination li {
+        display: flex;
+        align-items: center;
+    }
     
+    .pagination a,
+    .pagination span {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    
+}
 
 
 
@@ -541,6 +568,18 @@ min-width: 0 的重要性：
     .blog-box {
         max-width: 100%;
     }
+    @media screen and (max-width: 480px) {
+        .pagination {
+            gap: 4px;
+            margin: 30px auto 15px auto;
+        }
+        
+        .pagination a,
+        .pagination span {
+            padding: 6px 8px;
+            font-size: 14px;
+        }
+        
     
 }
 
