@@ -399,10 +399,7 @@ min-width: 0 的重要性：
         padding: 0 20px;
 
     }
-    .pagination li {
-        display: flex;
-        align-items: center;
-    }
+    
     
     .pagination a,
     .pagination span {
