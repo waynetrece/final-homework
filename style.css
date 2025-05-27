@@ -412,7 +412,54 @@ min-width: 0 的重要性：
     border-radius: 4px;
     
 }
-
+/* footer */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 60px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-top {
+    background-color: #f9f9f9;
+  }
+  
+  .footer-email {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-social li a img {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+  
+  .footer-bottom {
+    justify-content: center;
+    background-color: #fff;
+    font-size: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
 
 
 
@@ -481,9 +528,24 @@ min-width: 0 的重要性：
     .blog-box {
         flex: 1 1 280px;
     }
+    /* footer */
+    .container {
+        padding: 40px 60px;  
+        flex-direction: column; 
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-email {
+        font-size: 20px;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
 }
 
-}
+
 
 /* 手機版樣式（≤ 480px）*/
 @media screen and (max-width: 480px) {
@@ -575,6 +637,25 @@ min-width: 0 的重要性：
         .pagination span {
             padding: 6px 8px;
             font-size: 14px;
+        }
+        /* footer */
+        .container {
+            padding: 30px 20px;  
+            gap: 16px;
+        }
+        
+        .footer-email {
+            font-size: 18px;
+            word-break: break-all;  
+        }
+        
+        .footer-social {
+            gap: 12px;  
+        }
+        
+        .footer-social li a img {
+            width: 20px;  
+            height: 20px;
         }
         
     
